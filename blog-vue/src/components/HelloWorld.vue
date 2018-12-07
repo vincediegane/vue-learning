@@ -4,26 +4,23 @@
 
 <script>
 import { mapActions } from "vuex";
+import axios from 'axios'
 
 export default {
-  /* computed:{
-     users(){
-       return this.$store.getters.allUsers
-     }
-   } */
   data() {
     return {
       users: []
     };
   },
+
   mounted() {
-    this.$store.dispatch('getAllUsers')
-      .then(response => {
-        this.users = response
-        debugger
+    axios.get('https://dfbf7113.ngrok.io/listContacts')
+      .then(response=> {
+        this.users = response.data
       })
-      .catch(err => console.err(err))
-  }
+      .catch(err => console.error(err))
+  },
+
 };
 </script>
 
