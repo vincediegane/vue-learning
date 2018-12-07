@@ -1,4 +1,3 @@
-export default{
-allUsers: [],
-selectedUser: {}
+export default {
+  allUsers: []
 }

@@ -1,8 +1,5 @@
 export default{
-    allUsers(){
+    allUsers: function(state){
         return state.allUsers
-    },
-    getSelectedUser: state => {
-        return state.selectedUser
     }
 }
